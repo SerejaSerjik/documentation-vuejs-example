@@ -8,9 +8,56 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
+    <h1>Vue Documentation Examples</h1>
+    <h2>Hello World</h2>
     <div id="app">
         {{message}}
     </div>
+    <hr>
+    <h2>v-bind</h2>
+    <div id="app-2">
+        <span v-bind:title="message">
+            Hover here :)
+        </span>
+    </div>
+    <hr>
+    <h2>v-if</h2>
+    <div id="app-3">
+        <span v-if="seen">Now u see me <br> (app3.seen = false in console to check)</span>
+    </div>
+    <hr>
+    <h2>v-for</h2>
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ol>
+    </div>
+    <hr>
+    <h2>v-on</h2>
+    <div id="app-5">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">Reverse message</button>
+    </div>
+    <hr>
+    <h2>v-model</h2>
+    <div id="app-6">
+        <p>{{message}}</p>
+        <input v-model="message">
+    </div>
+    <hr>
+    <h2>Vue.component</h2>
+    <div id="app-7">
+        <ol>
+            <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id"
+            ></todo-item>
+        </ol>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
