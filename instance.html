@@ -8,7 +8,12 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-  
+  <div id="app">
+    <p>{{ foo }}</p>
+    <button v-on:click="foo = 'baz'">Change</button>
+  </div>
+  <div id="example"></div>
+
   <script src="instance.js"></script>
 </body>
 </html>
